@@ -1,110 +1,12 @@
 <div class="products">
   <div class="container">
     <div class="product_grid">
-      <div class="row">
+      <div class="row" >
 
         <!--Product bound through an angular child component-->
-        <div class="col-md-3">
-          <product-thumbnail [product]="product"></product-thumbnail>
+        <div class="col-md-3" *ngFor="let item of products">
+          <product-thumbnail [product]="item"></product-thumbnail>
         </div>
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img src="assets/images/iphone_xs.png"></div>
-            <div class="product_extra product_sale"><a href="">Sale</a></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">iPhone XS</a></div>
-              <div class="product_price">$670</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/ipod_touch.jpg"></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">iPod Touch</a></div>
-              <div class="product_price">$670</div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/iphone_xs.png"></div>
-            <div class="product_extra product_sale"><a href="categories.html">Sale</a></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">iPhone XS</a></div>
-              <div class="product_price">$670</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/samsung_galaxy_tab_s4.jpg"></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">Samsung Tab S4</a></div>
-              <div class="product_price">$570</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-
-
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/ipad_pro.jpg"></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">iPad Pro</a></div>
-              <div class="product_price">$1100</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/asus_chromebook_flip.jpg"></div>
-            <div class="product_extra product_hot"><a href="categories.html">Hot</a></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">ASUS ChromeBook Flip C101PA</a></div>
-              <div class="product_price">$800</div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/huawei_nova_3i.jpg"></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">Huawei Nova 3i</a></div>
-              <div class="product_price">$300</div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-3">
-          <!-- Product -->
-          <div class="product">
-            <div class="product_image"><img alt="" src="assets/images/gear_sport.jpg"></div>
-            <div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
-            <div class="product_content">
-              <div class="product_title"><a href="product.html">Samsung Gear Sport</a></div>
-              <div class="product_price">$670</div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
