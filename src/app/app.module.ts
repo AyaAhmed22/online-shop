@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -21,15 +21,16 @@ import { RelatedProductsComponent } from './related-products/related-products.co
 import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { ProductThumbnailComponent } from './product-thumbnail/product-thumbnail.component';
 
 
 const appRoutes: Routes = [
-  { path: 'contact-page', component: ContactPageComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'home/product-sheet', component: ProductSheetComponent},
-  { path: 'cart', component: CartComponent},
-  { path: 'signup', component: SignupComponent},
-  { path: 'login', component: LoginComponent},
+  { path: 'contact-page', component: ContactPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home/product-sheet', component: ProductSheetComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     ProductsComponent,
     SignupComponent,
     LoginComponent,
+    ProductThumbnailComponent
   ],
   imports: [
     BrowserModule,

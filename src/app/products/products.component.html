@@ -2,6 +2,12 @@
   <div class="container">
     <div class="product_grid">
       <div class="row">
+
+        <!--Product bound through an angular child component-->
+        <div class="col-md-3">
+          <product-thumbnail [product]="product"></product-thumbnail>
+        </div>
+
         <div class="col-md-3">
           <!-- Product -->
           <div class="product">
