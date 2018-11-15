@@ -22,6 +22,7 @@ import { CartComponent } from "./cart/cart.component";
 import { SignupComponent } from "./signup/signup.component";
 import { LoginComponent } from "./login/login.component";
 import { ProductThumbnailComponent } from "./product-thumbnail/product-thumbnail.component";
+import { CategoriesComponent } from './categories/categories.component';
 
 const appRoutes: Routes = [
   { path: "contact-page", component: ContactPageComponent },
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     ProductsComponent,
     SignupComponent,
     LoginComponent,
-    ProductThumbnailComponent
+    ProductThumbnailComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
