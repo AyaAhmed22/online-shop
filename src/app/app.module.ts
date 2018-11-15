@@ -53,6 +53,7 @@ const appRoutes: Routes = [
     ProductDetailComponent,
     RelatedProductsComponent,
     CartComponent,
+    ProductsComponent,
     SignupComponent,
     LoginComponent,
   ],
