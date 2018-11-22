@@ -23,6 +23,8 @@ import { SignupComponent } from "./signup/signup.component";
 import { LoginComponent } from "./login/login.component";
 import { ProductThumbnailComponent } from "./product-thumbnail/product-thumbnail.component";
 import { CategoriesComponent } from './categories/categories.component';
+import { StoreModule } from '@ngrx/store'
+import { reducer } from './store/reducer'
 
 const appRoutes: Routes = [
   { path: "contact-page", component: ContactPageComponent },
@@ -63,9 +65,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    StoreModule.forRoot({ products: reducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

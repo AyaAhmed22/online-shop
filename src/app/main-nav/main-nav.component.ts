@@ -1,4 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Store, select } from "@ngrx/store";
+import { Observable } from "rxjs";
+import * as Product from "./../store/actions";
 
 @Component({
   selector: 'app-main-nav',
@@ -7,8 +10,10 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 })
 export class MainNavComponent implements OnInit {
   private IsSearching: boolean = false;
-
-  constructor(private cd: ChangeDetectorRef) { }
+  product: Observable<Array<any>>
+  constructor(private cd: ChangeDetectorRef, private store: Store<any>) {
+    this.product = this.store.select('products');
+  }
 
   private setIsSearching(): void {
     this.IsSearching = this.IsSearching == false ? true : false;
@@ -25,8 +30,8 @@ export class MainNavComponent implements OnInit {
     }
   }
 
-  private searchElement() {
-    alert('not yet implemented ')
+  private searchElement(product) {
+    this.store.dispatch(new Product.RemoveProduct(product));
   }
 
   ngOnInit() {
