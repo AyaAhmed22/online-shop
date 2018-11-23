@@ -24,6 +24,8 @@ import { LoginComponent } from "./login/login.component";
 import { ProductThumbnailComponent } from "./product-thumbnail/product-thumbnail.component";
 import { CategoriesComponent } from './categories/categories.component';
 import { StoreModule } from '@ngrx/store'
+import {HttpModule} from '@angular/http'
+import { HttpClientModule } from '@angular/common/http';
 import { reducer } from './store/reducer'
 
 const appRoutes: Routes = [
@@ -62,6 +64,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
