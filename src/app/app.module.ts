@@ -24,9 +24,10 @@ import { LoginComponent } from "./login/login.component";
 import { ProductThumbnailComponent } from "./product-thumbnail/product-thumbnail.component";
 import { CategoriesComponent } from './categories/categories.component';
 import { StoreModule } from '@ngrx/store'
-import {HttpModule} from '@angular/http'
+import { HttpModule } from '@angular/http'
 import { HttpClientModule } from '@angular/common/http';
 import { reducer } from './store/reducer'
+import { ProductsService } from './services/products/products.service'
 
 const appRoutes: Routes = [
   { path: "contact-page", component: ContactPageComponent },
@@ -72,7 +73,7 @@ const appRoutes: Routes = [
     ),
     StoreModule.forRoot({ products: reducer })
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
