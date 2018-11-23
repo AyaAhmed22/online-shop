@@ -5,6 +5,7 @@ import { PRODUCTS } from '../store/products';
 import { Http, Response } from '@angular/http'
 import * as Products from "./../store/actions";
 import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../services/products/products.service';
 
 @Component({
   selector: 'app-products',
@@ -19,7 +20,7 @@ export class ProductsComponent implements OnInit {
   productsData;
   prods: Observable<Array<any>>;
 
-  constructor(private store: Store<any>, private http: Http) {
+  constructor(private store: Store<any>, private http: Http, private productsService: ProductsService) {
     this.getData();
     console.log(this.productsData);
   }
